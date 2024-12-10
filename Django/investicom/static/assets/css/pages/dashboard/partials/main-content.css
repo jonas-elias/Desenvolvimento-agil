@@ -1,0 +1,255 @@
+.bg-main {
+  background-color: var(--main-bg-verde);
+  padding: 1rem;
+  width: 100%;
+}
+
+.main-content {
+  background-color: var(--branco);
+  border-radius: 12px;
+  padding: 2rem;
+  height: 100%;
+  width: 100%;
+  overflow-x: scroll;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.container-bem-vindo-txt h1 {
+  font-family: fontBold;
+  font-size: 20px;
+}
+
+.container-bem-vindo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.container-operacoes {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 1rem;
+}
+
+.btn-add-compra,
+.btn-add-venda {
+  font-size: 16px;
+  font-family: fontBold;
+  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border: solid 1px var(--verde-modal);
+  border-radius: 12px;
+  transition-property: background-color, color;
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
+  cursor: pointer;
+}
+
+.btn-add-compra {
+  color: var(--branco);
+  background-color: var(--verde-modal);
+}
+
+.btn-add-compra:hover {
+  background-color: transparent;
+  color: var(--verde-modal);
+}
+
+.btn-add-compra:hover .cart-icon {
+  fill: var(--verde-modal);
+}
+
+.btn-add-venda {
+  color: var(--verde-modal);
+  background-color: transparent;
+}
+
+.btn-add-venda:hover {
+  color: var(--branco);
+  background-color: var(--verde-modal);
+}
+
+.btn-add-venda:hover .tag-icon {
+  fill: var(--branco);
+}
+
+.popup-compra,
+.popup-venda {
+  width: 360px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 2rem;
+  border-radius: 12px;
+  color: var(--branco);
+  background-color: var(--verde-modal);
+}
+
+.popup-compra .popup-titulo-compra,
+.popup-venda .popup-titulo-venda {
+  font-size: 24px;
+  font-family: fontBold;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+#formCompra,
+#formVenda {
+  font-family: fontRegular;
+}
+
+input,
+select {
+  width: 100%;
+  height: 40px;
+  margin: 10px 0;
+  font-size: 16px;
+  color: var(--branco);
+  background-color: transparent;
+  border: solid 1px var(--branco);
+  border-radius: 12px;
+  padding: 8px;
+  outline: none;
+}
+
+.btn-forms {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  margin-top: 1rem;
+}
+
+.btn-cancel-form,
+.btn-confirm-form {
+  font-size: 16px;
+  font-family: fontBold;
+  background-color: transparent;
+  color: var(--branco);
+  cursor: pointer;
+}
+
+.modal {
+  display: none;
+  place-items: center;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+}
+
+.box-grafico-principal {
+  display: inline-block;
+  padding: 1rem;
+  margin: 1.5rem 0;
+  background-color: var(--branco);
+  width: 100%;
+  height: 60%;
+  border-radius: 12px;
+  box-shadow: 2px 4px 4px 1px rgba(2, 79, 82, 0.2);
+}
+
+.box-grafico-principal .grafico {
+  background-color: var(--verde-claro);
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  padding: 1rem;
+}
+
+.grafico .titulo-grafico {
+  font-family: fontBold;
+  background-color: var(--verde-titulo-grafico);
+  text-align: center;
+  color: var(--branco);
+  width: fit-content;
+  padding: 0.5rem 5.5rem;
+  margin: 0 auto;
+  border-radius: 12px;
+}
+
+.grafico #grafico-principal {
+  width: 100%;
+  height: 90%;
+}
+
+.box-estatisticas {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: calc(50% - 1rem);
+}
+
+.box-estatisticas .estatistica {
+  background-color: var(--verde-claro);
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 2px 4px 4px 1px rgba(2, 79, 82, 0.2);
+  font-size: 16px;
+}
+
+.estatistica h4 {
+  font-family: fontBold;
+}
+
+.estatistica p {
+  font-family: fontRegular;
+}
+
+.box-noticias {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: calc(50% - 1rem);
+  float: right;
+  margin-left: 1rem;
+  padding: 1rem;
+  font-size: 16px;
+  color: var(--preto);
+  background-color: var(--branco);
+  border-radius: 12px;
+  box-shadow: 2px 4px 4px 1px rgba(2, 79, 82, 0.2);
+}
+
+.box-noticias h2 {
+  font-family: fontBold;
+  text-transform: uppercase;
+  font-size: 16px;
+}
+
+.box-noticias .noticia {
+  padding: 1rem;
+  width: 100%;
+  border-radius: 12px;
+  background-color: var(--verde-claro);
+}
+
+.noticia h4 {
+  font-family: fontBold;
+  text-transform: uppercase;
+}
+
+.noticia a {
+  color: var(--preto);
+  font-family: fontRegular;
+}
+
+.noticia p {
+  color: var(--preto);
+  font-family: fontRegular;
+  font-size: 12px;
+}
